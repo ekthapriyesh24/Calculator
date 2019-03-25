@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
             case (R.id.Button_1):   s="";
                                     t.setText(s);
                                     break;
-            case (R.id.Button_2):   s=s+"+";
+            case (R.id.Button_2):   s=s+" + ";
                                     t.setText(s);
                                     break;
-            case (R.id.Button_3):   s=s+"-";
+            case (R.id.Button_3):   s=s+" - ";
                                     t.setText(s);
                                     break;
             case (R.id.Button_4):   s+="1";
@@ -58,19 +58,20 @@ public class MainActivity extends AppCompatActivity {
             case (R.id.Button_13):  s+="0";
                                     t.setText(s);
                                     break;
-            case (R.id.Button_14):  s+="*";
+            case (R.id.Button_14):  s+=" * ";
                                     t.setText(s);
                                     break;
-            case (R.id.Button_15):  s+="/";
+            case (R.id.Button_15):  s+=" / ";
                                     t.setText(s);
                                     break;
-            case (R.id.Button_16):  s+="=";
-                                    t.setText(s);
+            case (R.id.Button_16):  EvaluateString e=new EvaluateString();
+                                    int res=e.evaluate(s);
+                                    t.setText(Integer.toString(res));
                                     break;
             case (R.id.Button_17):  s+=".";
                                     t.setText(s);
                                     break;
-            case (R.id.Button_18):  s+="%";
+            case (R.id.Button_18):  s+=" % ";
                                     t.setText(s);
                                     break;
         }
